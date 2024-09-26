@@ -1,5 +1,5 @@
 import { ArrowLeftOutlined, CheckOutlined } from '@ant-design/icons';
-import { CHECKOUT_STEP_2 } from '@/constants/routes';
+import { CHECKOUT_STEP_1 } from '@/constants/routes';
 import { useFormikContext } from 'formik';
 import { displayMoney } from '@/helpers/utils';
 import PropType from 'prop-types';
@@ -18,7 +18,7 @@ const Total = ({ isInternational, subtotal }) => {
     const { cardnumber, ccv, ...rest } = values;
 
     dispatch(setPaymentDetails({ ...rest })); // save payment details
-    history.push(CHECKOUT_STEP_2);
+    history.push(CHECKOUT_STEP_1);
   };
 
   return (

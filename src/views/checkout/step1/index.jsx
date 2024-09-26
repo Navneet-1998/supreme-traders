@@ -1,6 +1,6 @@
 import { ArrowRightOutlined, ShopOutlined } from '@ant-design/icons';
 import { BasketItem } from '@/components/basket';
-import { CHECKOUT_STEP_2 } from '@/constants/routes';
+import { CHECKOUT_STEP_3 } from '@/constants/routes';
 import { displayMoney } from '@/helpers/utils';
 import { useDocumentTitle, useScrollTop } from '@/hooks';
 import PropType from 'prop-types';
@@ -16,7 +16,7 @@ const OrderSummary = ({ basket, subtotal }) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const onClickPrevious = () => history.push('/');
-  const onClickNext = () => history.push(CHECKOUT_STEP_2);
+  const onClickNext = () => history.push(CHECKOUT_STEP_3);
 
   return (
     <div className="checkout">
